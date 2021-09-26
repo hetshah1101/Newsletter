@@ -17,7 +17,7 @@ def index():
         name = request.form.get('name')
         email = request.form.get('email')
         try:
-            add_user(email, name)
+            add_user(name, email)
             send_email(name, email, "message.txt")
             return render_template('success.html')
         except:
