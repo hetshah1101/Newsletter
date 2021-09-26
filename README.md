@@ -1,8 +1,13 @@
-# Newsletter
+## Newsletter
+This is a Newletter Subscription application made using Flask.
 
-export EMAIL_ADDRESS="enter your email address"
+# Instructions 
+Before running the app.py file make these changes.
 
+1)Go to your gmail account settings and turn on Less secure app access.
 
-Allow less secure apps: If you don't use 2-Step Verification, you might need to allow less secure apps to access your account.
+2)Either run these 2 commands in terminal to set up enviornment varibles or change value in mail.py file at line 9 and 10:
+    export EMAIL_ADDRESS="enter your email address here"
+    export EMAIL_PASSWORD="enter your password here"
 
-Less secure app access and turn it on.
+After these steps you can run the app.py file.
