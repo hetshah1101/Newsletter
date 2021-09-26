@@ -1,2 +1,7 @@
 flask
 flask_cors
+os
+smtplib
+string
+email
+sqlite3
