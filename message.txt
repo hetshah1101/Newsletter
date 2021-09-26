@@ -1,6 +1,3 @@
-Dear ${PERSON_NAME}, 
+DEAR ${PERSON_NAME}, 
 
-This is a test message. 
-Have a great weekend! 
-
-Yours Truly
+THANK YOU FOR SUBSCRIBING TO OUR NEWSLETTER!!

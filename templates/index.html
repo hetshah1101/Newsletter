@@ -1,13 +1,84 @@
-<!doctype html>
-<html>
-    <body>
-        <form action="/" method='post'>
-            <input type="text" placeholder="Name" name="name">
-            <input type="text" placeholder="Post Content" name="post">
-            <input type="submit" value="Submit">
-        </form>
-        {% for post in posts  %}
-        <div>{{ post[1] + ': ' + post[2] }}</div>
-        {% endfor %}
-    </body>
+<style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+        font-family: arial;
+    }
+    .newsletter {
+        background-color: #22bad5;
+        padding: 20% 5%;
+        color: #fff;
+    }
+    .newsletter h1, .newsletter p{
+        text-align: center;
+        line-height: 34px;
+    }
+    .newsletter-box {
+        margin: 20px auto;
+        display: table;
+    }
+    .newsletter-box i {
+        background: #f7f7f7;
+        width: 60px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 40px;
+        color: #294cbd;
+        border-right: 1px solid rgb(255, 255, 255);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        height: 42px;
+    }
+    .newsletter .newsletter-box button {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: #22bad5;
+        color: #fff;
+        padding: 0 15px;
+        font-size: 14px;
+        cursor: pointer;
+        border: 2px solid rgb(252, 252, 252);
+        border-left: 0px;
+        height: 42px;
+        margin-top: 5px;
+    }
+    .emailbox{
+        border: none;
+        outline: none;
+    }
+    .emailbox {
+        width: 0px;
+        height: 42px;
+        transition: 0.6s;
+        font-size: 16px;
+    }
+    .newsletter-box:hover > .emailbox, .emailbox:focus{
+        width: 280px;
+        padding: 0 10px;
+    }
+    </style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Newsletter Subsscription</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+</head>
+<body>
+    <form action="/" method='post' class="newsletter">
+        <h1>Subscribe to Our Newsletter Today</h1>
+        <p>Lorem Ipsum is simply dummy text Lorem Ipsum</p>
+        <div class="newsletter-box">
+            <i class="fas fa-envelope"></i>
+            <input class="emailbox" type="text" name="name" value="" placeholder="Enter your Name">
+            <input class="emailbox" type="email" name="email" value="" placeholder="Enter your email id">
+            <button type="submit" name="button">Subscribe</button>
+        </div>
+    </form>
+</body>
 </html>

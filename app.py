@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from flask_cors import CORS
 from models import create_post, get_posts
+from mail import *
 
 app = Flask(__name__)
 
@@ -14,12 +15,10 @@ def index():
 
     if request.method == 'POST':
         name = request.form.get('name')
-        post = request.form.get('post')
-        create_post(name, post)
+        email = request.form.get('email')
+        send_email(name, email, "message.txt")
 
-    posts = get_posts()
-
-    return render_template('index.html', posts=posts)
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

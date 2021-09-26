@@ -18,7 +18,6 @@ def read_template(filename):
     return Template(template_file_content)
 
 # names, emails = get_contacts('mycontacts.txt') 
-names, emails = 'HET', EMAIL_ADDRESS
 
 # function to generate and send mail
 def send_email(name, email, mail_template):
@@ -27,7 +26,7 @@ def send_email(name, email, mail_template):
     msg = MIMEMultipart()
     message = message_template.substitute(PERSON_NAME=name.title())
 
-    msg['Subject'] = 'TEST MAIL'
+    msg['Subject'] = 'NEWSLETTER SUBSCRIPTION'
     msg['From'] = EMAIL_ADDRESS
     msg['To'] = email
 
@@ -45,5 +44,3 @@ def send_email(name, email, mail_template):
         smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
         smtp.send_message(msg)
     del msg
-
-send_email(names, emails, "message.txt")
